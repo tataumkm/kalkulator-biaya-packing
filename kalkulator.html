@@ -18,24 +18,17 @@
   <main
     class="w-[90vw] max-w-3xl bg-[#fdf7ec] rounded-3xl shadow-lg p-8 md:p-12 text-[#5a3e1b] flex flex-col gap-6"
   >
-    <h1 class="text-3xl font-semibold text-center mb-4">Kalkulator Biaya Packing Anggrek</h1>
-
-    <!-- Tombol Kembali -->
-    <a href="index.html" class="absolute left-6 top-6 text-[#7a6841] hover:text-[#a88f3a] transition" title="Kembali">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-    </a>
+    <h1 class="text-3xl font-semibold text-center mb-4">Kalkulator Biaya Packing</h1>
 
     <label for="jenis" class="font-medium text-lg">Jenis Packing</label>
     <select
       id="jenis"
       class="w-full rounded-xl border border-[#c9b89a] bg-[#f9f5e7] px-4 py-3 text-[#5a3e1b] focus:outline-none focus:ring-2 focus:ring-[#bfa46f] transition"
     >
+      <option value="customKayu">Custom Kayu</option>
+      <option value="customKardus">Custom Kardus</option>
       <option value="kardus1kg">Kardus Khusus 1kg</option>
       <option value="kardus2kg">Kardus Khusus 2kg</option>
-      <option value="customKardus">Custom Kardus</option>
-      <option value="customKayu">Custom Kayu</option>
     </select>
 
     <div id="ukuranBox" class="hidden flex flex-col gap-4">
