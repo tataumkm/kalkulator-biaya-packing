@@ -11,24 +11,28 @@
       font-family: "Google Sans", sans-serif;
     }
 
-    .marquee {
-      white-space: nowrap;
-      overflow: hidden;
+      .marquee-container {
       position: relative;
+      white-space: nowrap;
     }
-
-    .marquee span {
+  
+    .marquee-content {
       display: inline-block;
-      padding-left: 100%;
+      white-space: nowrap;
       animation: scroll-left 15s linear infinite;
     }
-
+  
+    .marquee-content span {
+      display: inline-block;
+      padding-right: 2rem; /* sedikit jarak biar enggak terlalu dempet */
+    }
+  
     @keyframes scroll-left {
       0% {
         transform: translateX(0%);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -36,8 +40,11 @@
 <body class="flex flex-col items-center">
 
   <!-- 🔔 Tulisan Berjalan / Banner CTA -->
-  <a href="https://wa.me/6285117517554" target="_blank" class="w-full bg-yellow-500 text-[#5a3e1b] py-4 font-bold text-center shadow-md z-50 marquee hover:bg-yellow-400 transition">
-    <span>Anda ingin kalkulator custom sesuai apa yang kamu butuhin? Klik disini dan segera dapatin kalkulatormu. &nbsp; &nbsp; </span>
+  <a href="https://wa.me/6285117517554" target="_blank" class="w-full bg-yellow-500 text-[#5a3e1b] py-4 font-bold text-center shadow-md z-50 overflow-hidden marquee-container hover:bg-yellow-400 transition">
+    <div class="marquee-content">
+      <span>Anda ingin kalkulator custom sesuai apa yang kamu butuhin? Klik disini dan segera dapatin kalkulatormu. </span>
+      <span>Anda ingin kalkulator custom sesuai apa yang kamu butuhin? Klik disini dan segera dapatin kalkulatormu. </span>
+    </div>
   </a>
 
   <main class="w-[90vw] max-w-3xl bg-[#fdf7ec] rounded-3xl shadow-lg p-8 md:p-12 text-[#5a3e1b] flex flex-col gap-6 mt-6">
